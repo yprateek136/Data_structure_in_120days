@@ -8,7 +8,7 @@ int deletion(int arr[],int size,int index)
 	}
 	return 1;
 }
-// traverse code
+// traverse code 
 void display(int arr[],int size)
 {
 	for(int i=0;i<size;i++)

@@ -13,7 +13,6 @@ public:
         return res;
     }
 };
-//coment
 // Driver Code Starts.
 int main() {
     int t;

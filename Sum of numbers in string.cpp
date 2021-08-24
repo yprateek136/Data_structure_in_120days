@@ -14,7 +14,11 @@ class Solution
         {
             if(str[i]>='0' && str[i]<='9')
             {
-                sum1=(10*sum1)+((int)str[i]-48);
+                // Iterate through all characters
+                // of input string and update result
+                // take ASCII character of corresponding digit and
+                // subtract the code from '0' to get numerical
+                sum1=(10*sum1)+(str[i]-'0');
             }
             else
             {

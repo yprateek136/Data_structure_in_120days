@@ -11,12 +11,8 @@ struct Node
         next = NULL;
     }
 };
-
-
  // } Driver Code Ends
 /* Link list node */
-
-
 class Solution
 {
     public:

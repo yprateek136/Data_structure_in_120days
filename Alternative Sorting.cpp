@@ -1,4 +1,3 @@
-//  Alternative Sorting.cpp
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -8,28 +7,32 @@ class Solution
 	public:
 	vector<int> alternateSort(int arr[], int N)
 	{
-	    sort(arr, arr + N);
-        vector<int> res;
-        int index = 0;
-        int i = 0, j = N - 1;
-        while(i <= j)
+	     // Your code goes here
+        vector<int>v1;
+        sort(arr,arr+N);
+        int a=0;
+        int b=N-1;
+        for(int i=0;i<N/2;i++)
         {
-            if(index % 2 == 0)
+            v1.push_back(arr[b]);
+            if(a!=b)
             {
-                res.push_back(arr[j]);
-                j--;
+                v1.push_back(arr[a]);
             }
-            else
-            {
-                res.push_back(arr[i]);
-                i++;
-            }
-            index++;
-        }
-        return res;
+            a++;
+            b--;
+	    }
+	    if(N%2==1)
+	    {
+	         v1.push_back(arr[N/2]);
+	    }
+	    return v1;
 	}
 };
+	
+
 // { Driver Code Starts.
+
 int main() 
 {
    	
@@ -37,16 +40,22 @@ int main()
     cin >> t;
     while (t--)
     {
-    	int n;     	
+    	int n;
+       	
 		cin>>n;
 		int a[n];
 		for(int i=0;i<n;++i)
 			cin>>a[i];
+       
+
         Solution ob;
         vector<int> ans = ob.alternateSort(a, n);
         for(auto i:ans)
         	cout << i << " ";
-	    cout << "\n";	     
+	    cout << "\n";
+	     
     }
     return 0;
 }
+
+  // } Driver Code Ends
